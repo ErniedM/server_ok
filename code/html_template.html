@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Website Status</title>
+</head>
+<body>
+	<h1>Website Status</h1>
+	<ul>
+	{% for status in data %}
+		{% if "online" in status %}
+			<li style="color: green">{{ status }}</li>
+		{% elif "offline" in status %}
+			<li style="color: red">{{ status }}</li>
+		{% else %}
+			<li>{{ status }}</li>
+		{% endif %}
+	{% endfor %}
+	</ul>
+</body>
+</html>
